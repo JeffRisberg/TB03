@@ -24,14 +24,14 @@
 </head>
 
 <body>
-<script src="js/jquery-1.10.2.min.js"></script>
+<script src="js/jquery-1.11.3.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 	  	 
 <div class="navbar navbar-inverse navbar-fixed-top">
   <div class="container">
     <div class="navbar-inner">
       
-      <a class="navbar-brand" href="index.html">TB02</a>
+      <a class="navbar-brand" href="index.html">TB03</a>
       <div class="nav-collapse collapse">
         <ul class="nav">
               <li class="active"><a href="#">Home</a></li>
@@ -163,7 +163,7 @@
 	    <footer>
 	      <div class="row">
 	        <div class="col-xs-6">
-	          <p>&copy; Company 2014</p>
+	          <p>&copy; Company 2014-2015</p>
 	        </div>
 	        <div class="col-xs-6" style="text-align: right">
 	          <p>All Rights Reserved</p>

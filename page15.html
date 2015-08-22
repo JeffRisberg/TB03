@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8"/>
 
-    <title>Panel Expand Collapse</title>
+    <title>JCrop Example</title>
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -56,14 +56,7 @@
 
 <div class="container">
 
-    <div style="width: 600px; background: #eee">
-
-        <div id="rightPanel" style="background: green; width: 200px; float:right; height: 200px;">
-        </div>
-        <div id="centerPanel" style="background: red; width: 400px; height: 200px">
-        </div>
-    </div>
-    <a id="clicker" href="#">Click</a>
+    <img id="jcrop_target" src="images/carousel-image-01.jpg" alt="">
 
     <hr>
 
@@ -81,25 +74,10 @@
 </div><!--/ .container-->
 
 <script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/jquery.Jcrop.js"></script>
 <script>
     $(function () {
-        var width = 200;
-
-        $('#clicker').click(function () {
-            console.log("click");
-            if (width == 200) {
-                width = 0;
-            }
-            else {
-                width = 200;
-            }
-
-            //$('#rightPanel').css('width', width);
-            //$('#centerPanel').css('width', 600 - width);
-
-            $('#rightPanel').animate({width: width}, 400);
-            $('#centerPanel').animate({width: 600 - width}, 400);
-        });
+        $('#jcrop_target').Jcrop();
     });
 </script>
 

@@ -1,4 +1,4 @@
-<!-- fundraiser tables page -->
+<!-- chosen page -->
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
 <head>
@@ -10,14 +10,15 @@
 
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
     <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/chosen.css"/>
 
     <style type="text/css">
         body {
             padding-top: 60px;
         }
 
-        .sidebar-nav {
-            padding: 9px 0;
+        .chosen-select {
+            width: 300px;
         }
     </style>
 
@@ -58,158 +59,18 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-md-1">
-
-        </div>
-        <div class="col-md-11">
-            <!--Body content-->
-            <h4>Manage Your Fundraisers</h4>
-
-            <p>
-            <table class="table table-striped">
-                <tr>
-                    <th>Type</th>
-                    <th>Details</th>
-                    <th>&nbsp;</th>
-                    <th>&nbsp;</th>
-                    <th>Action</th>
-                </tr>
-                <tr>
-                    <td>Wedding</td>
-                    <td colspan="3">
-                        <div class="row">
-                            <div class="col-md-3" style="white-space: nowrap">
-                                <a href="">Jack and Dianne</a>
-                            </div>
-                            <div class="col-md-6">
-                                Planning an environment-friendly wedding...
-                            </div>
-                            <div class="col-md-3">
-                                Active
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-3">
-                                Date: 9/15/15
-                            </div>
-                            <div class="col-md-6">
-                                Goal: $600
-                            </div>
-                            <div class="col-md-3">
-                                2 Charities
-                            </div>
-                        </div>
-                    </td>
-                    <td style="white-space: nowrap">
-                        <button href="#">Edit</button>
-                        <button href="#">Delete</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Memorial</td>
-                    <td colspan="3">
-                        <div class="row">
-                            <div class="col-md-3" style="white-space: nowrap">
-                                <a href="">Uncle Bob's Memorial</a>
-                            </div>
-                            <div class="col-md-6">
-                                Bob was an active community member in...
-                            </div>
-                            <div class="col-md-3">
-                                Active
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-3">
-                                Date: 9/15/15
-                            </div>
-                            <div class="col-md-6">
-                                &nbsp;
-                            </div>
-                            <div class="col-md-3">
-                                &nbsp;
-                            </div>
-                        </div>
-                    </td>
-                    <td style="white-space: nowrap">
-                        <button href="#">Edit</button>
-                        <button href="#">Delete</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Fundraiser</td>
-                    <td colspan="3">
-                        <div class="row">
-                            <div class="col-md-3" style="white-space: nowrap">
-                                <a href="">Girl Scout Troop #344</a>
-                            </div>
-                            <div class="col-md-6">
-                                The girls will be helping Habitat..
-                            </div>
-                            <div class="col-md-3">
-                                Active
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-3">
-                                Date: 9/15/15
-                            </div>
-                            <div class="col-md-6">
-                                &nbsp;
-                            </div>
-                            <div class="col-md-3">
-                                &nbsp;
-                            </div>
-                        </div>
-                    </td>
-                    <td style="white-space: nowrap">
-                        <button href="#">Edit</button>
-                        <button href="#">Delete</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Wedding</td>
-                    <td colspan="3">
-                        <div class="row">
-                            <div class="col-md-3" style="white-space: nowrap">
-                                <a href="">Steve and Janet's Big Day</a>
-                            </div>
-                            <div class="col-md-6">
-                                Please help us raise money for leukemia...
-                            </div>
-                            <div class="col-md-3">
-                                Pending
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-3">
-                                Date: 10/10/15
-                            </div>
-                            <div class="col-md-6">
-                                Goal: $1000
-                            </div>
-                            <div class="col-md-3">
-                                4 charities
-                            </div>
-                        </div>
-                    </td>
-                    <td style="white-space: nowrap">
-                        <button href="#">Edit</button>
-                        <button href="#">Delete</button>
-                    </td>
-                </tr>
-            </table>
-            </p>
-            <div>
-                <ul class="pagination">
-                    <li><a href="#">Prev</a></li>
-                    <li><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#">Next</a></li>
-                </ul>
-            </div>
+        <div class="col-md-12">
+            <select data-placeholder="Your Favorite Types of Bear" multiple class="chosen-select" tabindex="8">
+                <option value=""></option>
+                <option>American Black Bear</option>
+                <option>Asiatic Black Bear</option>
+                <option>Brown Bear</option>
+                <option>Giant Panda</option>
+                <option selected>Sloth Bear</option>
+                <option>Sun Bear</option>
+                <option>Polar Bear</option>
+                <option>Spectacled Bear</option>
+            </select>
         </div>
     </div>
 
@@ -229,6 +90,14 @@
 
 <script src="js/jquery-1.11.3.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/chosen.jquery.js"></script>
+
+<script>
+    $(function() {
+        $('.chosen-select').chosen();
+        $('.chosen-select-deselect').chosen({ allow_single_deselect: true });
+    });
+</script>
 
 </body>
 </html

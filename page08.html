@@ -100,6 +100,9 @@
 
             <h2>Highcharts Example 2</h2>
             <div id="chart2" style="width: 700px"></div>
+
+            <h2>Highcharts Example 3</h2>
+            <div id="chart3" style="width: 700px"></div>
         </div>
     </div>
 
@@ -122,6 +125,7 @@
 <script src="js/bootstrap.min.js" type="text/javascript"></script>
 <script src="js/jquery.raty.js" type="text/javascript"></script>
 <script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="http://code.highcharts.com/highcharts-more.js"></script>
 
 <script type="text/javascript">
   // fix to get drop-downs working on iPad
@@ -348,6 +352,76 @@
           [Date.UTC(1971, 5, 10), 1.85],
           [Date.UTC(1971, 5, 15), 1.49],
           [Date.UTC(1971, 5, 23), 1.08]
+        ]
+      }]
+    });
+
+    var chart3 = new Highcharts.Chart({
+      credits: { enabled: false },
+      chart: {
+        renderTo: 'chart3',
+        type: 'bubble',
+        plotBorderWidth: 1,
+        zoomType: 'xy'
+      },
+
+      legend: {
+        enabled: false
+      },
+
+      title: {
+        text: 'Risk level over time'
+      },
+
+      xAxis: {
+        gridLineWidth: 1,
+        title: {
+          text: 'Time'
+        },
+        labels: {
+          formatter: function() {
+            return Highcharts.dateFormat('%m/%d/%y', this.value*1000);
+          }
+        }
+      },
+
+      yAxis: {
+        startOnTick: false,
+        endOnTick: false,
+        title: {
+          text: 'Risk'
+        },
+        labels: {
+          format: '{value}'
+        },
+        maxPadding: 0.2
+      },
+
+      plotOptions: {
+        series: {
+          dataLabels: {
+            enabled: true
+          }
+        }
+      },
+
+      series: [{
+        data: [
+          { x: 1514764800, y: 5.0, z: 13.8 },
+          { x: 1515064800, y: 5.0, z: 14.7 },
+          { x: 1515364800, y: 5.0, z: 15.8 },
+          { x: 1515664800, y: 5.0, z: 12.0 },
+          { x: 1515964800, y: 5.0, z: 11.8 },
+          { x: 1516264800, y: 5.0, z: 16.6 },
+          { x: 1516564800, y: 5.0, z: 14.5 },
+          { x: 1516864800, y: 5.0, z: 10.0 },
+          { x: 1517164800, y: 5.0, z: 24.7 },
+          { x: 1517464800, y: 5.0, z: 10.4 },
+          { x: 1517764800, y: 5.0, z: 16.0 },
+          { x: 1518064800, y: 5.0, z: 35.3 },
+          { x: 1518364800, y: 5.0, z: 28.5 },
+          { x: 1518664800, y: 5.0, z: 15.4 },
+          { x: 1518943200, y: 5.0, z: 31.3 }
         ]
       }]
     });
